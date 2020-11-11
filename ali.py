@@ -12,18 +12,12 @@ bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 wallet1 = pyqiwi.Wallet(token='400646e9cc8dd9687955e7ccc238122d', number='7776757968')
 waletos_1=wallet1.balance()
-wallet2 = pyqiwi.Wallet(token='e950f35a2e2ca1541bef453c53e775f2', number='7084144892')
-waletos_2=wallet2.balance()
 if waletos_1<59000:
     key='48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iP4rAZWjBqvBwpbzWZMf5GVMDkZk6jUGBTzHig4MqzjYTR1VQ24pq9LHq2odiS1Agv9AyLNfLA5DBsr7pnHEfxEEqveFxUhCjHv4YTGZkQH'
 else:
     async def warning_1(message:types.Message):
-            await bot.send_message(chat_id='828223875',text='Предупреждение Кошелек номер 1 переполнен!')
-    if waletos_2<59000:
-        key='48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iP41tfXFtP5yVbsgQ2CcFAC73sE33oxtMFfRE7EDGbkokiS99QSygFUHzU8pscRrAVD9wQKhsYQoqDyjH7VcMJbufB2qqEyCmqrV3uxsM8k'
-    else:
-        async def warning(message:types.Message):
-            await bot.send_message(chat_id='828223875',text='Предупреждение Кошелек номер 2 переполнен!')
+        await bot.send_message(chat_id='828223875',text='Предупреждение Кошелек номер 1 переполнен!')
+    key='48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iP41tfXFtP5yVbsgQ2CcFAC73sE33oxtMFfRE7EDGbkokiS99QSygFUHzU8pscRrAVD9wQKhsYQoqDyjH7VcMJbufB2qqEyCmqrV3uxsM8k'
 menu=ReplyKeyboardMarkup(
     keyboard=[
         [
